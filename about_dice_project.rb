@@ -6,11 +6,7 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
    attr_accessor :values
    
    def roll num
-     @values = []
-     num.times do |roll|
-       @values<< (1 + rand(6))
-     end
-     @values
+     @values = (1..num).map { |roll| 1 + rand(6)}
    end
    
  end
